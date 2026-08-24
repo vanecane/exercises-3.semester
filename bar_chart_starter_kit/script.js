@@ -8,6 +8,8 @@ function generateColumns() {
   if (valueArr.length > 20) {
     //console.log("Nu er arrayet længere end 20");
     valueArr.shift();
+    // Fjerner den første/ældste søjle fra hjemmesiden
+    list.firstElementChild.remove();
   }
   const li = document.createElement("li");
   li.style.setProperty("--height", randomNum);
